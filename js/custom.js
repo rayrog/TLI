@@ -1,1 +1,0 @@
-document.write("<img src='' alt='Ca marche!'");

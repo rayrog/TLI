@@ -1,3 +1,19 @@
 body{
   color: blue;
 }
+
+#menu{
+  text-align: center;
+}
+
+ul{
+  list-style-type: none;
+}
+#menu li {
+  display: inline;
+  margin: 2vh;
+}
+.notif {
+  background-color:bisque;
+  padding: 0.5vh;
+}

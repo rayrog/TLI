@@ -9,24 +9,61 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <!-- Custome JS -->
+  <!-- Custom JS -->
   <script type="text/javascript" src="js/custom.js"></script>
 </head>
 
 <body>
-  <!-- Connexion au site -->
+  <header>
+    <!-- Menu -->
+    <nav>
+      <ul id="menu">
+        <li><a href="/index.html" class="menu-item">Accueil</a></li>
+        <li><a href="/help.html" class="menu-item">Aide</a></li>
+        <li><a href="#contact" class="menu-item">Contact</a></li>
+        <li><a href="/mentions.html" class="menu-item">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Connection Section -->
   <div id="login">
     <h1>Connexion</h1>
     <p>Bonjour à tous veuillez vous identifier pour profiter de toutes les fonctionnalités du site</p>
-    <form id="form_login" action=""> <!-- TODO: link with another ressource -->
-      <label for="id_user">Nom d'utilisateur :</label>
+    <form id="form_login" action="">
+      <!-- TODO: link with another ressource -->
+      <label for="id_user" accesskey="c">Nom d'utilisateur :</label>
       <input id="id_user" name="id_user" type="text" placeholder="Jean" required>
       <label for="pass_user">Mot de passe :</label>
       <input id="pass_user" name="pass_user" type="password" placeholder="***********" required>
+      <input type="submit" value="Connexion">
     </form>
   </div>
 
+  <!-- Pathology Consultation -->
+  <div id="pathology">
+    <h1>Consulter les pathologies</h1>
+    <p>C'est ici que vous pourrez consulter la liste des symptômes des principales pathologies en acupuncture . Il est possible de n’afficher que certaines des pathologies en fonction de différents critères. Il ne vous reste plus qu'à vous connecter pour rechercher les pathologies comportant certains symptômes.</p>
+    <table>
+      <tr>
+        <th>Méridien</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Essai</td>
+        <td>Trollolo</td>
+      </tr>
+    </table>
+  </div>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+  <footer id="contact"> &#169;opyright 2017 Rayan ROGAI &amp; Luka DUJARDIN - rayan.rogai@cpe.fr; luka.dujardin</footer>
 </body>
 
 </html>
