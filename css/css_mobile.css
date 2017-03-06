@@ -1,35 +1,39 @@
-h1 a{
-  color:white;
-}
+
 h2{
   position:center;
+  font-size:12px;
   
 }
 h1{
   margin-top:0px;
   position:center;
-  font-size:6vh;
+  font-size:15px;
 }
 header{
+}
+
+h1 a{
+  color:white;
 }
 
 a{
   color:blue;
   text-decoration:none;
 }
-em{
+
+em {
   color:black;
   text-decoration:none;
-  font-size:15px;
+  font-size:10px;
 }
 p {
   color:black;
   text-decoration:none;
-  font-size:14px;
+  font-size:10px;
 }
 #banniere{
   background-color:#0174DF;
-  height:16vh;
+  height:20vh;
   width:100vw;
   color:white;
 }
@@ -56,9 +60,9 @@ p {
 input{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border:1px solid #ccc;
-  font-size:20px;
-  max-width:100%;
-  min-height:30px;
+  font-size:8px;
+
+  min-height:5px;
   display:block;
   margin-bottom:1%;
   padding-bottom:1%;
@@ -67,8 +71,11 @@ input{
 }
 input[type=submit] {
   background:none;
-  padding:10px;
+  padding:8px;
   cursor: pointer;
+}
+div {
+ font-size:8px; 
 }
 aside{
   margin-top: 2%;
@@ -92,4 +99,4 @@ text-align:right;
 }
 body{
  margin:0; 
-}
+} 
