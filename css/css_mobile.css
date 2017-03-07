@@ -1,26 +1,20 @@
-
 h2{
   position:center;
   font-size:12px;
-  
 }
 h1{
   margin-top:0px;
   position:center;
   font-size:15px;
+  height:30px
 }
-header{
-}
-
 h1 a{
   color:white;
 }
-
 a{
   color:blue;
   text-decoration:none;
 }
-
 em {
   color:black;
   text-decoration:none;
@@ -33,7 +27,7 @@ p {
 }
 #banniere{
   background-color:#0174DF;
-  height:20vh;
+  /*height:20vh;*/
   width:100vw;
   color:white;
 }
@@ -43,15 +37,14 @@ p {
   margin:0;
   padding:0;
   overflow:hidden;
+  width:100px;
+  font-size:10px;
 }
-#menu li {
-  float: left;
-}
+
 #menu li a {
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 5px 5px;
   text-decoration: none;
 }
 #menu li a:hover {

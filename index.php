@@ -1,12 +1,32 @@
 <?php 
-require_once('login.php');
 
-session_start(); // start or resume session
-if(isset($_SESSION['isConnect'])){
-  echo file_get_contents ('fragments/index');
-} else {
-  login();
+require_once('vendor/autoload.php');
+
+$loader = new Twig_Loader_Filesystem("fragments");
+$twig = new Twig_Environment($loader, array());
+
+$twig->display("head_page.html");
+
+$twig->display("menu.html");
+
+if(isset($_GET['p'])){
+switch ($_GET['p']){
+  case "help":
+    $page= "help.html";
+    break;
+  case "mentions":
+    $page= "mentions.html";
+    break;
+  default:
+    $page= "index.html";
+    break;
+}
+  $twig->display($page);
+} else { //Si on a pas d'arguments dans le GET
+  $twig->display("login.html");
+  $twig->display("index.html");
 }
 
+$twig->display("foot_page.html");
 ?>
 
