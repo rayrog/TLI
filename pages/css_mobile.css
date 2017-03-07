@@ -1,0 +1,101 @@
+
+h2{
+  position:center;
+  font-size:12px;
+  
+}
+h1{
+  margin-top:0px;
+  position:center;
+  font-size:15px;
+}
+header{
+}
+
+h1 a{
+  color:white;
+}
+
+a{
+  color:blue;
+  text-decoration:none;
+}
+
+em {
+  color:black;
+  text-decoration:none;
+  font-size:10px;
+}
+p {
+  color:black;
+  text-decoration:none;
+  font-size:10px;
+}
+#banniere{
+  background-color:#0174DF;
+  height:20vh;
+  width:100vw;
+  color:white;
+}
+#menu{
+  list-style-type: none;
+  background-color: #333;  
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  width:150px;
+  font-size:12px;
+}
+
+#menu li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#menu li a:hover {
+  background-color: #111;
+}
+input{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:1px solid #ccc;
+  font-size:8px;
+
+  min-height:5px;
+  display:block;
+  margin-bottom:1%;
+  padding-bottom:1%;
+  margin-top:1%;
+  outline: none;
+}
+input[type=submit] {
+  background:none;
+  padding:8px;
+  cursor: pointer;
+}
+div {
+ font-size:8px; 
+}
+aside{
+  margin-top: 2%;
+  display:inline-block;
+  width:20%;
+  height:10%;
+  vertical-align:top;
+}
+section{
+  margin-top: 2%;
+  display:inline-block;
+  width:70%;
+  height:100%;
+  vertical-align:top;
+}
+#boutton{
+  color:white;
+}
+footer {
+text-align:right;
+}
+body{
+ margin:0; 
+} 

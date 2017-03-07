@@ -8,24 +8,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medecine chinoise</title>
-    <script type='text/javascript' src='/fs03/share/users/corentin.dominguez/home/Documents/Semestre 8/TLI/Tp Fil Rouge/NotreSite/js/script.js'></script>
+    <script type='text/javascript' src='/fs03/share/users/corentin.dominguez/home/Documents/Semestre8/TLI/TpFilRouge/NotreSite/js/script.js'></script>
   </head>
  
    <body onload="date_heure('date_heure')">
     <header>
       <div id="banniere">
 	<h1> <a href="site_Accueil.html"> Les pathologies en médecine traditionnelle chinoise </a></h1>
-      </div>
       <nav>
-	<ul id="menu">
+	<ul id="menu" role = "menu">
+	  <li><a href="site_Accueil.html"> Accueil </a></li>
 	  <li><a href="site_pagePathologies.html"> Les pathologies </a></li>
 	  <li><a href="site_pageSymptomes.html"> Les symptomes </a></li>
-	 <li><a href="site_pageInfo.html"> Nos ressources </a></li>
+	  <li><a href="site_pageInfo.html"> Nos ressources </a></li>
+	  <li id="recherche"><form  oninput="" method="post action="lib/main.php.variable=truc">
+	    <div>
+		  <input type="search" maxlength="20"  placeholder="search">
+	    </div>
+	</form>
+      </div></li>
 	 </ul>
      </nav>
    </header>
   <section>
-    <article>
+    <article role ="presentation">
       <h2> Introduction </h2>
       <p>Dans le courant du XIX° siècle, grâce aux jésuites revenant de Chine,
       la Médecine Traditionnelle Chinoise est apparue timidement en occident, et en
@@ -69,7 +75,7 @@
 	</form>
     </aside>
      <footer>
-       <span id="date_heure" role = "horloge"></span>
+       <span id="date_heure"></span>
      </footer>
   </body>
   
