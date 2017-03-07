@@ -11,10 +11,9 @@
     <script type='text/javascript' src='/fs03/share/users/corentin.dominguez/home/Documents/Semestre8/TLI/TpFilRouge/NotreSite/js/script.js'></script>
   </head>
   <body onload="date_heure('date_heure')">
-      <?php include('menu.php'); ?>
     <header>
+	<?php include('menu.php'); ?>
     </header>
-    
     <section>
       <article role ="presentation">
 	  <h2> Introduction </h2>
@@ -53,7 +52,7 @@
 			<div class="bouton">
 <!-- 				<input type="submit" value="S'inscrire" />  -->
 				<input type="button" name="inscription" value="S'inscrire"
-				onclick="self.location.href='site_pageInscription.html'"> 
+				onclick="self.location.href='site_pageInscription.php'"> 
 			</div>
 	</form>
    </aside>
