@@ -2,6 +2,7 @@
 
 require_once('vendor/autoload.php');
 
+
 $loader = new Twig_Loader_Filesystem("fragments");
 $twig = new Twig_Environment($loader, array());
 
