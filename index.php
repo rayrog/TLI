@@ -28,6 +28,8 @@ switch ($_GET['p']){
 } 
 }else { //Si on a pas d'arguments dans le GET
   $twig->display("index.html");
+  //debug luka : 
+  $twig->display("pathology.html");
 }
 
 $twig->display("foot_page.html");
