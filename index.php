@@ -22,13 +22,11 @@ switch ($_GET['p']){
     $twig->display("pathology.html");
     break;
   default:
-    $twig->display("login.html");
     $twig->display("index.html");
     break;
 
 } 
 }else { //Si on a pas d'arguments dans le GET
-  $twig->display("login.html");
   $twig->display("index.html");
 }
 

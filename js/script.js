@@ -1,9 +1,13 @@
-(function ($){
-  $(function() {
-    $("#search" ).click(function() {
-    $(".search").toggleClass("hidden-xs");
-    $(".search").toggleClass("visible-xs");
-});
+(function ($) {
+  $(function () {
+    $("#search").click(function () {
+      $(".search").toggleClass("hidden-xs");
+      $(".search").toggleClass("visible-xs");
+    });
+    $("#login").click(function () {
+      $(".login").toggleClass("hidden-xs");
+      $(".login").toggleClass("visible-xs");
+    });
 
   });
 })(jQuery)
@@ -25,4 +29,3 @@
 //	      input.setCustomValidity('');
 //	}
 //}
-
