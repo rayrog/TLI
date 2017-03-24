@@ -1,7 +1,10 @@
 <?php 
 
-require_once('vendor/autoload.php');
+//Connection à la base de donnée ( objet dans dp.php)
+require_once('lib/db.php');
+$bdd=DB::getDB();
 
+require_once('vendor/autoload.php');
 
 $loader = new Twig_Loader_Filesystem("fragments");
 $twig = new Twig_Environment($loader, array());
@@ -30,7 +33,6 @@ switch ($_GET['p']){
 }else { //Si on a pas d'arguments dans le GET
   $twig->display("index.html");
   //debug luka : 
-  $twig->display("pathology.html");
 }
 
 $twig->display("foot_page.html");
