@@ -10,6 +10,8 @@ $twig->display("head_page.html");
 
 $twig->display("menu.html");
 
+
+//Affiche la page sélectionnée dans le menu
 if(isset($_GET['p'])){
 switch ($_GET['p']){
   case "help":
@@ -24,7 +26,6 @@ switch ($_GET['p']){
   default:
     $twig->display("index.html");
     break;
-
 } 
 }else { //Si on a pas d'arguments dans le GET
   $twig->display("index.html");

@@ -1,4 +1,5 @@
-<?php
+
+ <?php
   
 $erreur = "";
 
@@ -15,10 +16,11 @@ if (isset($_POST['Login'])) {
 			$req = $bdd->prepare('SELECT pass FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
 			$req->execute();
 			$data = $req->fetch();
-			$pass=password_hash($_POST['login-password'], PASSWORD_BCRYPT);
+//			$pass=password_hash($_POST['login-password'], PASSWORD_BCRYPT);
+			$pass=$_POST['login-password'];
 			if ($data[0] == $pass) {
 				//on récupère le pseudo : 
-				$req = $bdd->prepare('SELECT pseudo FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
+				$req = $bdd->prepare('SELECT login FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
 				$req->execute();
 				$pseudo = $req->fetch();
 				//on lance une session
@@ -35,6 +37,6 @@ if (isset($_POST['Login'])) {
 	}
 	echo $erreur;
 	
-	
+	header('Location: index.php');
 }
 ?>
