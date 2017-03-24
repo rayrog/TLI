@@ -1,13 +1,19 @@
 <?php 
 
 require_once('vendor/autoload.php');
-
+session_start();
 
 $loader = new Twig_Loader_Filesystem("fragments");
 $twig = new Twig_Environment($loader, array());
 
 $twig->display("head_page.html");
-
+$arg=null;
+if(!isset($_SESSION["login"])){
+  $arg=false;
+} else {
+  $arg=true;
+}
+echo $twig->render('login.html', array('arg' => $arg));
 $twig->display("menu.html");
 
 

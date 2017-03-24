@@ -1,42 +1,37 @@
-
- <?php
+<?php
   
+        session_start();
 $erreur = "";
 
-//Si le formulaire connexion a été submit
-if (isset($_POST['Login'])) {
-	//on test les 2 champs
-	if ((isset($_POST['login-email']) && !empty($_POST['login-email'])) && (isset($_POST['login-password']) && !empty($_POST['login-password']))) {
-		//on vérifie que le mail existe
-		$req = $bdd->prepare('SELECT count(*) FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
-		$req->execute();
-		$data = $req->fetch();
-		if ($data[0] != 0) {
-			//on vérifie la combinaison mail/password
-			$req = $bdd->prepare('SELECT pass FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
-			$req->execute();
-			$data = $req->fetch();
-//			$pass=password_hash($_POST['login-password'], PASSWORD_BCRYPT);
-			$pass=$_POST['login-password'];
-			if ($data[0] == $pass) {
-				//on récupère le pseudo : 
-				$req = $bdd->prepare('SELECT login FROM user WHERE email="'.mysql_escape_string($_POST['login-email']).'"');
-				$req->execute();
-				$pseudo = $req->fetch();
-				//on lance une session
-				session_start();
-				$_SESSION["login"] = $pseudo[0];
-			}else{
-				$erreur = 'Password erroné';
-			}
-		}else{
-			$erreur = 'Adresse mail non connue';
-		}
-	}else{
-		$erreur = 'Les champs email et password doivent être remplis';
-	}
-	echo $erreur;
+$bdd = new PDO('mysql:host=localhost;dbname=filrouge;charset=utf8', 'root', 'tp');
+
+
+    if(isset($_POST['deco']) && $_POST['deco'] == 'deco'){
+      session_destroy();
+    } else {
+      //on test les 2 champs
+      if ((isset($_POST['login-email']) && !empty($_POST['login-email'])) && (isset($_POST['login-password']) && !empty($_POST['login-password']))) {
+  //	$pass=password_hash($_POST['login-password'], PASSWORD_BCRYPT);
+      $pass=$_POST['login-password'];
+      $email=$_POST['login-email'];
+
+      //on vérifie la combinaison mail/password
+      $req = $bdd->prepare('SELECT login FROM user WHERE email=:email AND pass=:pass');
+      $req->execute(array(':email' => $email, ':pass' => $pass));
+      $data = $req->fetch();
+      if($data[0] !== null){
+        $_SESSION["login"] = $data[0];
+      } else {
+        $erreur = 'Un ou plusieurs champs sont incorrects';
+      }		
+      }else{
+          $erreur = 'Les champs email et password doivent être remplis';
+      }
+    }
 	
-	header('Location: index.php');
-}
+    echo $erreur;
+
+  
+	header('Location: ../index.php');
+
 ?>

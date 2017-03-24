@@ -1,10 +1,21 @@
-<!-- Connection Section -->
-<div>
+{%if arg == true %}
+<div class="text-right">
   <form name="Login" action="lib/login.php" method="post">
-    <label for="login-email" accesskey="c">Nom d'utilisateur :</label>
+   <input type="hidden" value="deco" name="deco" id="deco">
+    <input type="submit" value="Se déconnecter">
+  </form>
+</div>
+{% else %}
+
+<!-- Connection Section -->
+<div class="text-right">
+  <form name="Login" action="lib/login.php" method="post">
+    <label for="login-email" accesskey="c">Email :</label>
     <input id="login-email" name="login-email" type="text" placeholder="Jean" required>
     <label for="login-password">Mot de passe :</label>
     <input id="login-password" name="login-password" type="password" placeholder="***********" required>
+    <input type="hidden" id="returnPage" name="returnPage" value="{{ page }}"> 
     <input type="submit" value="Connexion">
   </form>
 </div>
+{% endif %}
