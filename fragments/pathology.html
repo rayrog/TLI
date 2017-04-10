@@ -1,8 +1,22 @@
-  <!-- Pathology Consultation -->
-  <div id="pathology">
-    <?php require_once('lib/pathology.php'); ?>
-   
-    <h1>Consulter les pathologies</h1>
+<!-- Pathology Consultation -->
+<div id="pathology">
+    <h1>Consulter les symptome</h1>
     <p>C'est ici que vous pourrez consulter la liste des symptômes des principales pathologies en acupuncture . Il est possible de n’afficher que certaines des pathologies en fonction de différents critères. Il ne vous reste plus qu'à vous connecter pour rechercher les pathologies comportant certains symptômes.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Catégorie de pathologie</th>
+                <th>Caratéristiques possibles</th>
+                <th>Symptômes</th>
+            </tr>
+        </thead>
+          
+      <tbody> {% for item in list_news%}
+                <td>{item.patho}</td>
+                <td>{item.carac}</td>
+                <td>{item.symptome}</td>
+            </tr> {% endfor %} 
+        </tbody>
 
-  </div>   
+    </table>
+</div>

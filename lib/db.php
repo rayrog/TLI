@@ -4,13 +4,12 @@
 class DB{
     
 
-    
     private static $bdd = NULL;
 
         public static function getDB(){
         if(SELF::$bdd==null){
             try{
-              SELF::$bdd = new PDO('mysql:host=127.0.0.1;dbname=FilRouge;charset=utf8', 'root', '');
+              SELF::$bdd = new PDO('mysql:host=127.0.0.1;dbname=FilRouge;charset=utf8','root', '');
             }
             catch (Exception $e)
             {
@@ -32,7 +31,7 @@ class DB{
     
     }
 
-
+?>
 
 
 

@@ -1,11 +1,11 @@
 <?php 
 
-
 //Connection à la base de donnée ( objet dans dp.php)
 require_once('lib/db.php');
 $bdd=DB::getDB();
 session_start();
 require_once('vendor/autoload.php');
+
 
 $loader = new Twig_Loader_Filesystem("fragments");
 $twig = new Twig_Environment($loader, array());
@@ -31,7 +31,10 @@ switch ($_GET['p']){
     $twig->display("mentions.html");
     break;
   case "symptome":
+   
+    require_once('lib/pathology.php'); // Don't know how to call it from pathology.php
     $twig->display("pathology.html");
+        
     break;
   default:
     $twig->display("index.html");
